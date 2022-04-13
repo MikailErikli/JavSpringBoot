@@ -29,8 +29,10 @@ public class OuvrageControllerApi {
 
 
 	@PostMapping
-	public void createOuvrage(@RequestBody Ouvrage ouvrage) {
+	public Ouvrage createOuvrage(@RequestBody Ouvrage ouvrage) {
 		ouvrageService.addOuvrage(ouvrage);
+
+		return ouvrage;
 	}
 
 	@DeleteMapping("/{id}")

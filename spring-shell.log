@@ -1,0 +1,41 @@
+1649846753190:add --a 1 --b 2
+1649847065612:connect
+1649847079324:connect --password TristanAdmin!05
+1649851080227:ouvrage
+1649851146695:addOuvrage --title aled --author aledauth --isbn 548948-456423-856 --price 65.53 --stock 50
+1649851212172:connect
+1649851235580:connect --password TristanAdminaddOuvrage --title aled --author aledauth --isbn 548948-456423-856 --price 65.53 --stock 50
+1649851258180:connect --password
+1649851271101:connect --password TristanAdminaddOuvrage --title aled --author aledauth --isbn 548948-456423-856 --price 65.53 --stock 50
+1649851323027:ouvrage
+1649851610239:connect --password TristanAdminaddOuvrage --title aled --author aledauth --isbn 548948-456423-856 --price 65.53 --stock 50
+1649851978781:ouvrage
+1649852003655:connect
+1649852009174:connect --password
+1649852021724:connect --password TristanAdmin
+1649852028084:ouvrage
+1649852206295:connect --password TristanAdmin
+1649852211970:ouvrage
+1649852281632:addouvrage --title aled --author Mika --isbn 45648-12345-85 --price 5.50 --stock 5
+1649852410240:connect --password TristanAdmin
+1649852414556:ouvrage
+1649852419407:addouvrage --title aled --author Mika --isbn 45648-12345-85 --price 5.50 --stock 5
+1649852584933:connect
+1649852596557:connect --password TristanAdmin
+1649852599707:ouvrage
+1649852638739:addouvrage --title title --author author --isbn546489-456-45 --price 5.5 --stock 5
+1649852681753:connect --password TristanAdmin
+1649852685692:ouvrage
+1649852687481:addouvrage --title title --author author --isbn 546489-456-45 --price 5.5 --stock 5
+1649853850225:connect --password TristanAdmin
+1649853874179:rayon
+1649853912293:addRayon --theme Mika
+1649853954634:connect --password TristanAdmin
+1649853958053:rayon
+1649853973446:addRayon --theme Mika
+1649854022577:connect --password TristanAdmin
+1649854025571:rayon
+1649854040366:addrayon --theme Mika
+1649854071961:connect --password TristanAdmin
+1649854075116:rayon
+1649854082533:addrayon --theme Mika
