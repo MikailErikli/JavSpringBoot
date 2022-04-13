@@ -20,8 +20,10 @@ public class RayonControllerApi {
 	}
 
 	@PostMapping
-	public void createRayon(@RequestBody Rayon rayon) {
+	public Rayon createRayon(@RequestBody Rayon rayon) {
 		rayonService.addRayon(rayon);
+
+		return rayon;
 	}
 
 }
