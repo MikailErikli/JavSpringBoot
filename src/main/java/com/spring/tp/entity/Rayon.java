@@ -1,9 +1,8 @@
 package com.spring.tp.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Rayon {
@@ -13,4 +12,30 @@ public class Rayon {
     private Long id;
     private String theme;
 
+    @OneToMany
+    private List<Ouvrage> ouvrages = new ArrayList<>();
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTheme() {
+        return theme;
+    }
+
+    public void setTheme(String theme) {
+        this.theme = theme;
+    }
+
+    public List<Ouvrage> getOuvrages() {
+        return ouvrages;
+    }
+
+    public void setOuvrages(List<Ouvrage> ouvrages) {
+        this.ouvrages = ouvrages;
+    }
 }

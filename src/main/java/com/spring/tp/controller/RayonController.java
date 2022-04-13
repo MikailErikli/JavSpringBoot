@@ -19,7 +19,7 @@ public class RayonController {
 
 	@GetMapping("/list")
 	public List<Rayon> list(){
-		List<Rayon> rayons =new ArrayList<>();
+		List<Rayon> rayons = new ArrayList<>();
 		repository.findAll().forEach(rayons::add);
 		return rayons;
 	}
