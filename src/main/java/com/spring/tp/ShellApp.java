@@ -1,29 +1,17 @@
 package com.spring.tp;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.spring.tp.entity.Ouvrage;
 import com.spring.tp.entity.Rayon;
-import com.spring.tp.repository.RayonRepository;
-import com.spring.tp.repository.RayonRepositoryInterface;
-import com.spring.tp.service.OuvrageServiceInterface;
-import com.spring.tp.service.RayonService;
-import com.spring.tp.service.RayonServiceInterface;
-import org.apache.tomcat.util.json.JSONParser;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.shell.standard.ShellMethod;
 import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellOption;
 
 import java.io.*;
-import java.lang.reflect.Field;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.ProtocolException;
 import java.net.URL;
-import java.util.List;
 import java.util.Objects;
 
 @ShellComponent
@@ -33,12 +21,6 @@ public class ShellApp {
     private String object;
     @Value("${shell.password}")
     private String appPwd;
-
-    @Autowired
-    RayonServiceInterface rayonService;
-
-    @Autowired
-    OuvrageServiceInterface ouvrageService;
 
     @ShellMethod("Connect to the application.")
     public String connect(@ShellOption String password) {
