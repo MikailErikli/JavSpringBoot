@@ -6,16 +6,15 @@ window.onload=function () {
 
 };
 
-function processJson(contacts){
+function processJson(rayons){
 
-    var table = document.getElementById("contacts-list");
+    var table = document.getElementById("rayons-list");
 
-    for (var i = 0; i < contacts.length; i++) {
+    for (var i = 0; i < rayons.length; i++) {
 
         tr = table.insertRow(-1);
-        tr.insertCell(-1).innerHTML=contacts[i].id;
-        tr.insertCell(-1).innerHTML=contacts[i].firstName;
-        tr.insertCell(-1).innerHTML=contacts[i].lastName;
+        tr.insertCell(-1).innerHTML=rayons[i].id;
+        tr.insertCell(-1).innerHTML=rayons[i].theme;
 
     }
 
