@@ -10,17 +10,17 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/ouvrage")
-public class OuvrageController {
+public class OuvrageControllerWeb {
 	@Autowired
 	OuvrageService ouvrageService;
 
-	@RequestMapping("/")
-	public String loadRayon(){
+	@GetMapping("/")
+	public String loadOuvrage(){
 		List<Ouvrage> ouvrages = ouvrageService.getOuvrages();
 		return "ouvrage/listOuvrage";
 	}
 
-	@RequestMapping("/create")
+	@GetMapping("/create")
 	public String createOuvrage(Ouvrage ouvrage) {
 		ouvrageService.addOuvrage(ouvrage);
 		return "";

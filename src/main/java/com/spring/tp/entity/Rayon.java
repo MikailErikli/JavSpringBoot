@@ -12,9 +12,6 @@ public class Rayon {
     private Long id;
     private String theme;
 
-    @OneToMany
-    private List<Ouvrage> ouvrages = new ArrayList<>();
-
     public Long getId() {
         return id;
     }
