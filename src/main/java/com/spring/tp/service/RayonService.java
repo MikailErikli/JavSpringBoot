@@ -14,13 +14,12 @@ public class RayonService implements RayonServiceInterface{
     @Autowired
     RayonRepository repository;
 
-
     public List<Rayon> getRayons() {
         return (List<Rayon>) repository.findAll();
     }
 
     @Transactional
     public void addRayon(Rayon rayon) {
-
+        repository.save(rayon);
     }
 }

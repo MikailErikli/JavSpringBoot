@@ -12,9 +12,6 @@ public class Rayon {
     private Long id;
     private String theme;
 
-    @OneToMany
-    private List<Ouvrage> ouvrages = new ArrayList<>();
-
     public Long getId() {
         return id;
     }
@@ -29,13 +26,5 @@ public class Rayon {
 
     public void setTheme(String theme) {
         this.theme = theme;
-    }
-
-    public List<Ouvrage> getOuvrages() {
-        return ouvrages;
-    }
-
-    public void setOuvrages(List<Ouvrage> ouvrages) {
-        this.ouvrages = ouvrages;
     }
 }
