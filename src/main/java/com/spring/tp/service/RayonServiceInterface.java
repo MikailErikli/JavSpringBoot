@@ -4,7 +4,7 @@ import com.spring.tp.entity.Rayon;
 
 import java.util.List;
 
-public interface RayonServiceInterface {
+public interface RayonServiceInterface{
 
     List<Rayon> getRayons();
     void addRayon(Rayon rayon);
