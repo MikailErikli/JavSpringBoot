@@ -3,6 +3,7 @@ package com.spring.tp.controller.api;
 import com.spring.tp.entity.Ouvrage;
 import com.spring.tp.entity.Rayon;
 import com.spring.tp.service.RayonService;
+import com.spring.tp.service.RayonServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -15,33 +16,34 @@ import java.util.Optional;
 @RequestMapping("/api/rayon")
 public class RayonControllerApi {
 	@Autowired
-	RayonService rayonService;
+	RayonServiceInterface rayonService;
 
 
 	@GetMapping
-	public List<Rayon> loadRayon(){
+	public List<Rayon> loadRayon() throws Exception {
 		return rayonService.getRayons();
 	}
 
 	@GetMapping("/{id}")
-	public Rayon getOuvrageByid(@PathVariable Integer id) {
+	public Rayon getOuvrageByid(@PathVariable Integer id) throws Exception {
 		return rayonService.getRayonById(id);
 	}
 
+
 	@PostMapping
-	public void createRayon(@RequestBody Rayon rayon) {
-		rayonService.addRayon(rayon);
+	public void createRayon(@RequestBody Rayon rayon) throws Exception {
+		rayonService.addRayon(rayon) ;
 	}
 
 
 	@DeleteMapping("/{id}")
 	@ResponseStatus(code = HttpStatus.NO_CONTENT)
-	public void delete(@PathVariable(name="id") Integer id){
+	public void delete(@PathVariable(name="id") Integer id) throws Exception{
 		rayonService.deleteRayonById(id);
 	}
 
 	@PutMapping
-	public Rayon updateRayon(@RequestBody Rayon rayon){
+	public Rayon updateRayon(@RequestBody Rayon rayon) throws Exception{
 		return rayonService.updateRayon(rayon);
 	}
 
