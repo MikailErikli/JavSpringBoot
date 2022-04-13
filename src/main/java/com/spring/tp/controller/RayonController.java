@@ -1,7 +1,7 @@
 package com.spring.tp.controller;
 
-import com.spring.tp.entity.Contact;
-import com.spring.tp.repository.ContactRepository;
+import com.spring.tp.entity.Rayon;
+import com.spring.tp.repository.RayonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,15 +10,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-public class ContactController {
+public class RayonController {
 	@Autowired
-	ContactRepository repository;
+	RayonRepository repository;
 
 	@GetMapping("/list")
-	public List<Contact> list(){
-		List<Contact> contacts =new ArrayList<>();
-		repository.findAll().forEach(contacts::add);
-		return contacts;
+	public List<Rayon> list(){
+		List<Rayon> rayons =new ArrayList<>();
+		repository.findAll().forEach(rayons::add);
+		return rayons;
 	}
 
 }
