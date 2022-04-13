@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-public class OuvrageService {
+public class OuvrageService implements OuvrageServiceInterface {
     @Autowired
     OuvrageRepositoryInterface repository;
 

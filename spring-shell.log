@@ -39,3 +39,40 @@
 1649854071961:connect --password TristanAdmin
 1649854075116:rayon
 1649854082533:addrayon --theme Mika
+1649855796312:connect --password TristanAdmin
+1649855799612:rayon
+1649855816356:listrayons
+1649855871522:connect --password TristanAdmin
+1649855875597:rayon
+1649855879644:listrayons
+1649856111712:connect --password TristanAdmin
+1649856113677:rayon
+1649856117070:listrayons
+1649856134982:addrayon --theme aled
+1649856138109:listrayons
+1649856169408:connect --password TristanAdmin
+1649856172182:rayon
+1649856188246:addrayon --theme aled
+1649856192885:listrayons
+1649856414792:connect --password TristanAdmin
+1649856418214:rayon
+1649856424206:addrayon --theme
+1649856434477:addrayon --theme theme
+1649856437436:listrayons
+1649856475465:connect --password TristanAdmin
+1649856480979:rayon
+1649856488414:addrayon --theme theme
+1649856493221:listrayons
+1649856735144:connect --password TristanAdmin
+1649856738836:rayon
+1649856748455:addrayon --theme aled
+1649856751381:listrayons
+1649857077824:connect --password TristanAdmin
+1649857080966:ouvrage
+1649857139561:addouvrage --title title --author author --isbn 459489-4569-48977 --price 5.5 --stock 5 --theme aji
+1649857146965:listouvrages
+1649857296304:connect --password TristanAdmin
+1649857306621:ouvrage
+1649857348016:addouvrage --title --author --isbn --price
+1649857381146:addouvrage --title title --author author --isbn 456-456-789 --price 5.5 --stock 5 --theme aze
+1649857385398:listouvrages
