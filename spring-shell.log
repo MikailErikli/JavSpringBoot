@@ -79,3 +79,28 @@
 1649858171633:connect --password TristanAdmin
 1649858176261:ouvrage
 1649858179639:listouvrages
+1649859366040:connect --password TristanAdmin
+1649859370574:ouvrage
+1649859418170:addouvrage --title t --author a --isbn i --price 5 --stock 5 --theme e
+1649859439501:deleteouvrage 1
+1649859648315:connect --password TristanAdmin
+1649859651695:rayon
+1649859656141:delete 1
+1649859753273:connect --password TristanAdmin
+1649859757086:rayon
+1649859775582:delete 1
+1649859865778:connect --password TristanAdmin
+1649859870678:rayon
+1649859875031:listrayons
+1649859881294:ouvrage
+1649859885118:listouvrages
+1649859894518:delete 11
+1649859983459:connect --password TristanAdmin
+1649859989589:rayon
+1649859993343:listrayons
+1649860021902:delete 1
+1649860041765:ouvrage
+1649860047006:delete 1
+1649860050637:rayon
+1649860052990:delete 1
+1649860067127:bjkefmgbeuizlfgbzyhofvuofgbzeuihpfbzrhipfbzdjifbzeejhifbezjhipfzebiebjifpezbjomzerbnjovkfenjo^zrnuio^fuoernuoefnuofzngujgbfjhipqsdfbgjhialgbrfjipvrbnfjiorzp

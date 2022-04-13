@@ -186,7 +186,6 @@ public class ShellApp {
 
         String value = "";
 
-
         URL url = new URL("http://localhost:80/api/rayon");
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
         con.setRequestMethod("GET");
@@ -285,5 +284,38 @@ public class ShellApp {
         return value;
     }
 
+    @ShellMethod("Delete from one table.")
+    public String delete(int id) throws IOException {
+        if(!connected){
+            return "Please connect before any action on the tables";
+        }
+        if(!(Objects.equals(object, "ouvrage") || Objects.equals(object, "rayon"))){
+            return "No table selected: enter 'ouvrage' or 'rayon'";
+        }
 
+        String value = "";
+
+        URL url = new URL("http://localhost:80/api/"+object+"/"+id);
+        HttpURLConnection con = (HttpURLConnection) url.openConnection();
+        con.setRequestMethod("DELETE");
+        con.setRequestProperty("Accept", "application/json");
+        con.setDoOutput(true);
+
+        try(BufferedReader br = new BufferedReader(
+                new InputStreamReader(con.getInputStream(), "utf-8"))) {
+            StringBuilder response = new StringBuilder();
+            String responseLine = null;
+            while ((responseLine = br.readLine()) != null) {
+                response.append(responseLine.trim());
+            }
+            System.out.println(response);
+
+            value = "Fin";
+        } catch (Exception e) {
+            value = "Failed to get the data";
+            e.printStackTrace();
+        }
+
+        return value;
+    }
 }
