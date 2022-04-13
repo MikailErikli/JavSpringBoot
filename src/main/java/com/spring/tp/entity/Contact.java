@@ -1,4 +1,4 @@
-package com.formation.demo.entity;
+package com.spring.tp.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

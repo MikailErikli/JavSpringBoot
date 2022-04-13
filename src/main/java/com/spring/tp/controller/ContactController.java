@@ -1,7 +1,7 @@
-package com.formation.demo.controller;
+package com.spring.tp.controller;
 
-import com.formation.demo.entity.Contact;
-import com.formation.demo.repository.ContactRepository;
+import com.spring.tp.entity.Contact;
+import com.spring.tp.repository.ContactRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
