@@ -76,3 +76,6 @@
 1649857348016:addouvrage --title --author --isbn --price
 1649857381146:addouvrage --title title --author author --isbn 456-456-789 --price 5.5 --stock 5 --theme aze
 1649857385398:listouvrages
+1649858171633:connect --password TristanAdmin
+1649858176261:ouvrage
+1649858179639:listouvrages

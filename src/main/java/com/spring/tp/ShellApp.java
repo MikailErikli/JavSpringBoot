@@ -205,7 +205,13 @@ public class ShellApp {
 
             for(Rayon r: rayons){
                 System.out.println("Rayon: "+ r.getId());
-                System.out.println("Thème: " + r.getTheme());
+                if(r.getTheme() != null) {
+                    System.out.println("Thème: " + r.getTheme());
+                }
+            }
+
+            if(rayons.length == 0){
+                System.out.println("No data from the table");
             }
 
             value = "Fin";
@@ -264,6 +270,10 @@ public class ShellApp {
                 if(o.getRayon() != null){
                     System.out.println("Thème: " + o.getRayon().getTheme());
                 }
+            }
+
+            if(ouvrages.length == 0){
+                System.out.println("No data from the table");
             }
 
             value = "Fin";
