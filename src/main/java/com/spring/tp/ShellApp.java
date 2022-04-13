@@ -95,6 +95,7 @@ public class ShellApp {
         ouvrage.setIsbn(isbn);
         ouvrage.setPrice(price);
         ouvrage.setStock(stock);
+        ouvrage.setRayon(RayonByTheme(theme));
 
         ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
         String json = ow.writeValueAsString(ouvrage);
@@ -221,6 +222,37 @@ public class ShellApp {
 
         return value;
     }
+
+    public Rayon RayonByTheme(String theme) throws IOException {
+
+        String value = "";
+        Rayon rayon = new Rayon();
+
+        URL url = new URL("http://localhost:80/api/rayon/findbytheme?theme=" + theme);
+        HttpURLConnection con = (HttpURLConnection) url.openConnection();
+        con.setRequestMethod("GET");
+        con.setRequestProperty("Accept", "application/json");
+        con.setDoOutput(true);
+
+        try(BufferedReader br = new BufferedReader(
+                new InputStreamReader(con.getInputStream(), "utf-8"))) {
+            StringBuilder response = new StringBuilder();
+            String responseLine = null;
+            while ((responseLine = br.readLine()) != null) {
+                response.append(responseLine.trim());
+            }
+            final ObjectMapper objectMapper = new ObjectMapper();
+            Rayon[] rayons = objectMapper.readValue(response.toString(), Rayon[].class);
+
+            rayon = rayons[0];
+        } catch (Exception e) {
+            System.out.println("Failed to get the data");
+            e.printStackTrace();
+        }
+
+        return rayon;
+    }
+
 
     @ShellMethod("List table 'ouvrage'.")
     public String listouvrages() throws IOException {

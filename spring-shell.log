@@ -104,3 +104,16 @@
 1649860050637:rayon
 1649860052990:delete 1
 1649860067127:bjkefmgbeuizlfgbzyhofvuofgbzeuihpfbzrhipfbzdjifbzeejhifbezjhipfzebiebjifpezbjomzerbnjovkfenjo^zrnuio^fuoernuoefnuofzngujgbfjhipqsdfbgjhialgbrfjipvrbnfjiorzp
+1649861306036:connect --password TristanAdmin
+1649861320895:ouvrage
+1649861329534:rayon
+1649861331944:addrayon
+1649861344564:addrayon --theme newtheme
+1649861348284:ouvrage
+1649861351745:addouvrage
+1649861383499:addouvrage --title t --author a --isbn i --price 5 --stock 5 --theme newtheme
+1649861533791:connect --password TristanAdmin
+1649861542476:rayon
+1649861547816:addrayon --theme aled
+1649861551215:ouvrage
+1649861565824:addouvrage t a i 5 5 aled
