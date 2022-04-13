@@ -14,15 +14,8 @@ import java.util.List;
 @RequestMapping("/rayon")
 public class RayonController {
 	@Autowired
-	RayonRepository repository;
-	private RayonServiceInterface rayonService;
+	RayonService rayonService;
 
-	@GetMapping("/list")
-	public List<Rayon> list(){
-		List<Rayon> rayons = new ArrayList<>();
-		repository.findAll().forEach(rayons::add);
-		return rayons;
-	}
 
 	@GetMapping
 	public List<Rayon> loadRayon(){
