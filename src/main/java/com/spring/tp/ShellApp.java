@@ -154,12 +154,10 @@ public class ShellApp {
                 response.append(responseLine.trim());
             }
 //            System.out.println(response.toString());
-            value = "Ouvrage added to the table";
+            value = "Rayon added to the table";
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        value = "Rayon added to the table";
 
         return value;
     }
